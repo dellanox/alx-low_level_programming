@@ -10,17 +10,12 @@
  */
 int main(void)
 {
-	/* Print the single digit numbers using putchar */
-	putchar('0');
-	putchar('1');
-	putchar('2');
-	putchar('3');
-	putchar('4');
-	putchar('5');
-	putchar('6');
-	putchar('7');
-	putchar('8');
-	putchar('9');
+	int numberz;
+
+	for (numberz = 0; numberz < 10; numberz++)
+	{
+	putchar(digit + '0');
+	}
 	putchar('\n');
 
 	return (0);
