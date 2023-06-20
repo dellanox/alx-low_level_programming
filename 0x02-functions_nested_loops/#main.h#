@@ -1,0 +1,20 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+int _putchar(char c);
+void print_alphabet(void);
+void print_alphabet_x10(void);
+int _islower(int c);
+int _isalpha(int c);
+mplemented the function with the prototype int print_sign(int n).
+    Used an if statement to check if the number n is greater than zero.
+    If the condition is true, the function prints '+' using _putchar and returns 1.
+    Used an else if statement to check if the number n is equal to zero.
+    If the condition is true, the function prints '0' using _putchar and returns 0.
+    Used an else statement to handle the case when the number n is less than zero.
+    If the condition is true, the function prints '-' using _putchar and returns -1.
+
+Make sure to include the main.h header file in your project, which should contain the prototype for the print_sign function.
+
+
+#endif /* MAIN_H */
