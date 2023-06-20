@@ -1,21 +1,23 @@
 #include <stdlib.h>
+#include <limits.h>
 #include "main.h"
 
 /**
- * print_last_digit - Prints the last digit of a number
- * @n: The number
+ * main - check the code for Holberton School students.
  *
- * Return: The value of the last digit
+ * Return: Always 0.
  */
-int print_last_digit(int n)
+int main(void)
 {
-	int last_digit;
+    int r;
 
-	if (n < 0)
-		n = -n;
+    r = print_last_digit(INT_MAX);
+    _putchar('0' + r);
+    _putchar('\n');
 
-	last_digit = n % 10;
-	_putchar(last_digit + '0');
+    r = print_last_digit(INT_MIN);
+    _putchar('0' + r);
+    _putchar('\n');
 
-	return (last_digit);
+    return (0);
 }
