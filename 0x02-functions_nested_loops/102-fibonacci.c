@@ -2,14 +2,15 @@
 
 void fibonacciLoop(int n)
 {
+	int fibonacci[50];
+	int i;
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
+
 	if (n < 1) {
 		printf("Invalid number of terms\n");
 		return;
 	}
-
-	int fibonacci[50];
-	fibonacci[0] = 1;
-	fibonacci[1] = 2;
 
 	printf("%d, %d", fibonacci[0], fibonacci[1]);
 
