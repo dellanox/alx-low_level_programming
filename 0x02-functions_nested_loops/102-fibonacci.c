@@ -7,9 +7,9 @@
  */
 void fibonacciLoop(int n)
 {
-	int prev1 = 1;
-	int prev2 = 2;
-	int num;
+	long long prev1 = 1;
+	long long prev2 = 2;
+	long long num;
 	int i;
 
 
@@ -18,11 +18,11 @@ void fibonacciLoop(int n)
 		return;
 	}
 
-	printf("%d, %d", prev1, prev2);
+	printf("%lld, %lld", prev1, prev2);
 
 	for (i = 3; i <= n; i++) {
 		num = prev1 + prev2;
-		printf(", %d", num);
+		printf(", %lld", num);
 		prev1 = prev2;
 		prev2 = num;
 	}
@@ -35,5 +35,5 @@ int main()
 {
 	int n = 50;
 	fibonacciLoop(n);
-	return 0;
+	return (0);
 }
