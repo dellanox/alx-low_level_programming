@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #inlude <stdio.h>
 #include "main.h"
 #include <time.h>
