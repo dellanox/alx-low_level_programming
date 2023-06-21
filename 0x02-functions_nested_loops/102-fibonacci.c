@@ -7,33 +7,30 @@
  */
 void printFib(int n)
 {
+	int prev1 = 1;
+	int prev2 = 0;
+
+
 	if (n < 1) {
 		printf("Invalid number of terms\n");
 		return;
 	}
 
-	int prev1 = 1;
-	int prev2 = 0;
+	int i;
+	int num;
 
-	for (int i = 1; i <= n; i++) {
-		if (i > 2) {
-			int num = prev1 + prev2;
-			prev2 = prev1;
-			prev1 = num;
-			printf("%d ", num);
-		}
+	printf("%d ", prev2);
+	printf("%d ", prev1);
 
-		if (i == 1) {
-			printf("%d ", prev2);
-		}
-
-		if (i == 2) {
-			printf("%d ", prev1);
-		}
+	for (i = 1; i <= n; i++) {
+		num = prev1 + prev2;
+		prev2 = prev1;
+		prev1 = num;
+		printf("%d ", num);
 	}
 }
 
-int main(void)
+int main()
 {
 	int n = 9;
 	printFib(n);
