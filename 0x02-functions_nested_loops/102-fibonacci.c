@@ -9,27 +9,22 @@
  */
 int main(void)
 {
-	int count = 50;
-	int fibonacci[count];
+	int fibonacci[50];
 	int i;
 
-	// Initialize the first two Fibonacci numbers
 	fibonacci[0] = 1;
 	fibonacci[1] = 2;
 
-	// Compute the remaining Fibonacci numbers
-	for (i = 2; i < count; i++)
+	for (i = 2; i < 50; i++)
 	{
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 	}
 
-	// Print the Fibonacci numbers
-	for (i = 0; i < count; i++)
+	for (i = 0; i < 50; i++)
 	{
 		printf("%d", fibonacci[i]);
 
-		// Add comma and space for all numbers except the last one
-		if (i != count - 1)
+		if (i != 49)
 			printf(", ");
 	}
 
