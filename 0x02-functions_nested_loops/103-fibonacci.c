@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
- * fibonacciLoop - Function to print Fibonacci series
+ * Calculates the sum of the even-valued terms in the Fibonacci sequence
+ * up to a given limit.
  *
- * @n: Number of terms to print
+ * @param limit The upper limit for Fibonacci terms
+ * @return The sum of the even-valued terms
  */
 int main(void)
 {
