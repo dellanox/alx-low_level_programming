@@ -24,13 +24,13 @@ void printFib(int n)
 		num = prev1 + prev2;
 		prev2 = prev1;
 		prev1 = num;
-		printf("%d ", num);
+		printf("%d, ", num);
 	}
 }
 
 int main()
 {
-	int n = 9;
+	int n = 50;
 	printFib(n);
 	return 0;
 }
