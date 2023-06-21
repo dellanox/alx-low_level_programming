@@ -1,21 +1,41 @@
 #include <stdio.h>
 
-int main(void)
+/**
+ * printFib - Function to print Fibonacci series
+ *
+ * @n: Number of terms to print
+ */
+void printFib(int n)
 {
-	int first = 1;
-	int second = 2;
-	int next;
-	int i;
-
-	printf("The first 50 Fibonacci numbers are: ");
-	for (i = 0; i < 50; i++) {
-		next = first + second;
-		printf("%d, ", next);
-		first = second;
-		second = next;
+	if (n < 1) {
+		printf("Invalid number of terms\n");
+		return;
 	}
 
-	printf("\n");
+	int prev1 = 1;
+	int prev2 = 0;
 
+	for (int i = 1; i <= n; i++) {
+		if (i > 2) {
+			int num = prev1 + prev2;
+			prev2 = prev1;
+			prev1 = num;
+			printf("%d ", num);
+		}
+
+		if (i == 1) {
+			printf("%d ", prev2);
+		}
+
+		if (i == 2) {
+			printf("%d ", prev1);
+		}
+	}
+}
+
+int main(void)
+{
+	int n = 9;
+	printFib(n);
 	return 0;
 }
