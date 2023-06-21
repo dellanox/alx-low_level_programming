@@ -5,32 +5,34 @@
  *
  * @n: Number of terms to print
  */
-void printFib(int n)
+void fibonacciLoop(int n)
 {
-	int prev1 = 0;
-	int prev2 = 1;
-	int i;
-	int num;
+    int prev1 = 1;
+    int prev2 = 2;
+    int num;
+    int i;
 
-	if (n < 1) {
-		printf("Invalid number of terms\n");
-		return;
-	}
+    if (n < 1) {
+        printf("Invalid number of terms\n");
+        return;
+    }
 
-	printf("%d ", prev2);
-	printf("%d ", prev1);
+    printf("The first 50 Fibonacci numbers are: ");
+    printf("%d, %d", prev1, prev2);
 
-	for (i = 1; i <= n; i++) {
-		num = prev1 + prev2;
-		prev2 = prev1;
-		prev1 = num;
-		printf("%d, ", num);
-	}
+    for (int i = 3; i <= n; i++) {
+        num = prev1 + prev2;
+        printf(", %d", num);
+        prev1 = prev2;
+        prev2 = num;
+    }
+
+    printf("\n");
 }
 
 int main()
 {
-	int n = 50;
-	printFib(n);
-	return 0;
+    int n = 50;
+    fibonacciLoop(n);
+    return 0;
 }
