@@ -18,8 +18,6 @@ void fibonacciLoop(int n)
 		return;
 	}
 
-
-	printf("The first 50 Fibonacci numbers are: ");
 	printf("%d, %d", prev1, prev2);
 
 	for (i = 3; i <= n; i++) {
