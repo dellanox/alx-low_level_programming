@@ -11,7 +11,7 @@ int main() {
 			sum += term1;
 		}
 
-		int nextTerm = term1 + term2;
+		nextTerm = term1 + term2;
 		term1 = term2;
 		term2 = nextTerm;
 	}
