@@ -3,7 +3,7 @@
 void fibonacciLoop(int n)
 {
 	int fibonacci[50];
-	int i;
+	int i = 2;
 	fibonacci[0] = 1;
 	fibonacci[1] = 2;
 
@@ -14,7 +14,7 @@ void fibonacciLoop(int n)
 
 	printf("%d, %d", fibonacci[0], fibonacci[1]);
 
-	for (int i = 2; i < n; i++) {
+	for (i < n; i++) {
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 		printf(", %d", fibonacci[i]);
 	}
