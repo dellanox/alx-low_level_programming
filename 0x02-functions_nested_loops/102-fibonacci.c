@@ -9,15 +9,13 @@ void printFib(int n)
 {
 	int prev1 = 1;
 	int prev2 = 0;
-
+	int i;
+	int num;
 
 	if (n < 1) {
 		printf("Invalid number of terms\n");
 		return;
 	}
-
-	int i;
-	int num;
 
 	printf("%d ", prev2);
 	printf("%d ", prev1);
