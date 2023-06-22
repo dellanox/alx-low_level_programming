@@ -25,6 +25,11 @@ long largest_prime_factor(long n)
 	return (n > 2) ? n : 2;
 }
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	long number = 612852475143;
