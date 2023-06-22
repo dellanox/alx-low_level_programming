@@ -22,6 +22,7 @@ int main(void)
 	}
 
 	printf("\n");
+	printf("\n");
 
 	return (0);
 }
