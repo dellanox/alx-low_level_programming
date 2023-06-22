@@ -13,7 +13,6 @@ long largest_prime_factor(long n)
 
 	while (n % 2 == 0)
 		n /= 2;
-
 	for (i = 3; i <= sqrt(n); i += 2)
 	{
 	while (n % i == 0)
@@ -24,10 +23,11 @@ long largest_prime_factor(long n)
 
 	return (n > 2) ? n : 2;
 }
+
 /**
- * main - Entry point
+ * main - Entry point of the code
  *
- * Return: Always 0
+ * Return: Always (Success)
  */
 int main(void)
 {
