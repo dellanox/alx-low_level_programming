@@ -16,15 +16,14 @@ long largest_prime_factor(long n)
 
 	for (i = 3; i <= sqrt(n); i += 2)
 	{
-		while (n % i == 0)
-		{
-			n /= i;
-		}
+	while (n % i == 0)
+	{
+	n /= i;
+	}
 	}
 
 	return (n > 2) ? n : 2;
 }
-
 /**
  * main - Entry point
  *
