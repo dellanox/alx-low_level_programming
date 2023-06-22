@@ -2,32 +2,33 @@
 #include <math.h>
 
 /**
- * largest_prime_factor - Finds the largest prime factor of a given number
- * @n: The number to find the largest prime factor of
+ * largest_prime_factor - Finds the largest prime factor of a given number.
+ * @number: The number to find the largest prime factor of.
  *
- * Return: The largest prime factor of the number
+ * Return: The largest prime factor of the number.
  */
-long largest_prime_factor(long n)
+long largest_prime_factor(long number)
 {
-	long i;
+	long factor;
 
-	while (n % 2 == 0)
-		n /= 2;
-	for (i = 3; i <= sqrt(n); i += 2)
+	while (number % 2 == 0)
+		number /= 2;
+
+	for (factor = 3; factor <= sqrt(number); factor += 2)
 	{
-	while (n % i == 0)
-	{
-	n /= i;
-	}
+		while (number % factor == 0)
+		{
+			number /= factor;
+		}
 	}
 
-	return (n > 2) ? n : 2;
+	return (number > 2) ? number : 2;
 }
 
 /**
- * main - Entry point of the code
+ * main - Entry point of the program.
  *
- * Return: Always (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
