@@ -22,7 +22,15 @@ long largest_prime_factor(long number)
 		}
 	}
 
-	return (number > 2) ? number : (2);
+	if (number > 2)
+	{
+		return (number);
+	}
+	else
+	{
+		return (2);
+	}
+
 }
 
 /**
