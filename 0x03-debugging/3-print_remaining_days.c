@@ -9,10 +9,9 @@
 * @year: year
 * Return: void
 */
-
 void print_remaining_days(int month, int day, int year)
 {
-	int days_in_month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	int days_in_month[] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
 	int total_days = 0;
 	int i;
 
