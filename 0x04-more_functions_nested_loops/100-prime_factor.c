@@ -22,7 +22,7 @@ long largest_prime_factor(long number)
 		}
 	}
 
-	return (number > 2) ? number : 2;
+	return (number > 2) ? number : (2);
 }
 
 /**
