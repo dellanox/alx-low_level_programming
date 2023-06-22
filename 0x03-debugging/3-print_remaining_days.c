@@ -9,6 +9,7 @@
 * @year: year
 * Return: void
 */
+
 void print_remaining_days(int month, int day, int year)
 {
 	int days_in_month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
@@ -32,9 +33,8 @@ void print_remaining_days(int month, int day, int year)
 		return;
 	}
 
-
 	int remaining_days = 365 - total_days;
-	if (days_in_month[2] == 29 && month <= 2 && day <= 29)
+	if (days_in_month[2] == 29 && month = 2 && day <= 29)
 	{
 		remaining_days++;
 	}
