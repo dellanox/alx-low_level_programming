@@ -32,5 +32,5 @@ int main(void)
 
 	printf("%ld\n", largest_factor);
 
-	return 0;
+	return (0);
 }
