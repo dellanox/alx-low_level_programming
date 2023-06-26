@@ -15,15 +15,16 @@ int _atoi(char *s)
 	int sign = 1;
 	int started = 0;
 
+
 	while (*s != '\0')
 	{
-	if (*s == '-')
-		sign *= -1;
+		if (*s == '-')
+			sign *= -1;
 
-	if (*s >= '0' && *s <= '9')
-	{
-		if (result > INT_MAX / 10 ||
-		    (result == INT_MAX / 10 && (*s - '0') > INT_MAX % 10))
+		if (*s >= '0' && *s <= '9')
+		{
+			if (result > INT_MAX / 10 ||
+			    (result == INT_MAX / 10 && (*s - '0') > INT_MAX % 10))
 			{
 				if (sign == 1)
 					return (INT_MAX);
@@ -32,13 +33,15 @@ int _atoi(char *s)
 			}
 			result = result * 10 + (*s - '0');
 			started = 1;
-	}
-	else if (started)
-	{
-		break;
-	}
-	s++;
-	}
+		}
+		else if (started)
+		{
+			break;
 
-	return (sign * result);
+
+			s++;
+		}
+
+		return (sign * result);
+	}
 }
