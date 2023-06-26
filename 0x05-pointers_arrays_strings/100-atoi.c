@@ -26,9 +26,9 @@ int _atoi(char *s)
 		    (result == INT_MAX / 10 && (*s - '0') > INT_MAX % 10))
 			{
 				if (sign == 1)
-					return INT_MAX;
+					return (INT_MAX);
 				else
-					                    return INT_MIN;
+					return (INT_MIN);
 			}
 			result = result * 10 + (*s - '0');
 			started = 1;
