@@ -3,29 +3,29 @@
 #include <time.h>
 #include <string.h>
 
-#define PASSWORD_LENGTH 15
+#define MAX_PASSWORD_LENGTH 10
 
-/**
- * main - Generates a random valid password for 101-crackme.
- *
- * Return: Always 0.
- */
-int main(void)
+char* generatePassword()
 {
-	char password[PASSWORD_LENGTH + 1];
-	int i;
-	time_t t;
+	static const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	int length = rand() % MAX_PASSWORD_LENGTH + 1;
+	char* password = malloc((length + 1) * sizeof(char));
 
-	srand((unsigned int)time(&t));
-
-	for (i = 0; i < PASSWORD_LENGTH; i++)
-	{
-		password[i] = rand() % ('~' - '!') + '!';
+	for (int i = 0; i < length; i++) {
+		int index = rand() % (sizeof(charset) - 1);
+		password[i] = charset[index];
 	}
 
-	password[PASSWORD_LENGTH] = '\0';
+	password[length] = '\0';
+	return password;
+}
 
-	printf("%s\n", password);
+int main() {
+	srand(time(NULL));
 
-	return (0);
+	char* password = generatePassword();
+	printf("%s", password);
+	free(password);
+
+	return 0;
 }
