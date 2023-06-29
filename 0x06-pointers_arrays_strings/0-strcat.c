@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * @_strcat - function that conatenates a string
- * @dest: the destination string
- * @src: the source string
+ * _strcat - Concatenates two strings.
+ * @dest: The destination string where the source string will be appended.
+ * @src: The source string to be appended to the destination string.
  *
- * Return: - A pointer to the resulting string @dest
+ * Return: A pointer to the resulting string @dest.
  */
 char *_strcat(char *dest, char *src)
 {
@@ -14,13 +14,13 @@ char *_strcat(char *dest, char *src)
 
 	while (*dest != '\0')
 	{
-		dest++;
+	dest++;
 	}
 	while (*src != '\0')
 	{
-		*dest = *src;
-		dest++;
-		src++;
+	*dest = *src;
+	dest++;
+	src++;
 	}
 	*dest = '\0';
 	return (ptr);
