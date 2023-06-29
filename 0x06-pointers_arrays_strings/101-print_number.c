@@ -6,8 +6,7 @@
  */
 void print_number(int n)
 {
-	int scale = 1;
-	int temp = n;
+	int divisor = 1;
 
 	if (n < 0)
 	{
@@ -15,22 +14,13 @@ void print_number(int n)
 		n = -n;
 	}
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
+	while (n / divisor >= 10)
+		divisor *= 10;
 
-	while (temp > 9)
+	while (divisor != 0)
 	{
-		temp /= 10;
-		scale *= 10;
-	}
-
-	while (scale > 0)
-	{
-		_putchar('0' + (n / scale));
-		n %= scale;
-		scale /= 10;
+		_putchar('0' + (n / divisor));
+		n %= divisor;
+		divisor /= 10;
 	}
 }
