@@ -4,9 +4,12 @@
  * print_number - Prints an integer using _putchar function
  * @n: The integer to be printed
  */
+
 void print_number(int n)
 {
-	int digit;
+	int digits[10];
+	int digit_count = 0;
+	int i;
 
 	if (n < 0)
 	{
@@ -22,8 +25,13 @@ void print_number(int n)
 
 	while (n > 0)
 	{
-		digit = n % 10;
-		_putchar('0' + digit);
+		digits[digit_count] = n % 10;
+		digit_count++;
 		n /= 10;
+	}
+
+	for (i = digit_count - 1; i >= 0; i--)
+	{
+		_putchar('0' + digits[i]);
 	}
 }
