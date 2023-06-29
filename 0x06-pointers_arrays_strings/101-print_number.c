@@ -5,33 +5,21 @@
  * @n: The integer to be printed
  */
 
-void print_number(int n)
-{
-	int digits[10];
-	int digit_count = 0;
-	int i;
+void print_number(int n) {
+  if (n < 0) {
+    _putchar('-');
+    n = -n;
+  }
 
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
+  if (n == 0) {
+    _putchar('0');
+    return;
+  }
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-
-	while (n > 0)
-	{
-		digits[digit_count] = n % 10;
-		digit_count++;
-		n /= 10;
-	}
-
-	for (i = digit_count - 1; i >= 0; i--)
-	{
-		_putchar('0' + digits[i]);
-	}
+  int digit;
+  do {
+    digit = n % 10;
+    _putchar('0' + digit);
+    n /= 10;
+  } while (n > 0);
 }
