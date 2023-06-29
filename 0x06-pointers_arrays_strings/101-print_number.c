@@ -37,3 +37,23 @@ void print_number(int n)
 		divisor /= 10;
 	}
 }
+void print_number(int n)
+{
+  if (n < 0) {
+    _putchar('-');
+    n = -n;
+  }
+
+  if (n == 0) {
+    _putchar('0');
+    eturn;
+
+  }
+
+  int digit;
+  while (n > 0) {
+    digit = n % 10;
+    _putchar('0' + digit);
+    n /= 10;
+  }
+}
