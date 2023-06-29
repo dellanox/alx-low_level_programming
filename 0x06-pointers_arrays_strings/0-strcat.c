@@ -3,8 +3,6 @@
 #include <string.h>
 
 /**
- * main - a function that concatenates two strings
- *
  * @_strcat -  function that conatenates a string
  * @dest: the destination string
  * @src: the source string
