@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
 
 /**
  * @_strcat - function that conatenates a string
@@ -23,8 +22,6 @@ char *_strcat(char *dest, char *src)
 		dest++;
 		src++;
 	}
-
 	*dest = '\0';
-
 	return (ptr);
 }
