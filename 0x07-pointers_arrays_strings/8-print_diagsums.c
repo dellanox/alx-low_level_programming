@@ -1,6 +1,4 @@
 #include "main.h"
-void print_number(int num);
-void _putchar(char c);
 
 /**
  * print_diagsums - Prints the sum of the two diagonals of a square matrix
@@ -9,48 +7,19 @@ void _putchar(char c);
  */
 void print_diagsums(int *a, int size)
 {
-	int i;
-	int sum1 = 0;
-	int sum2 = 0;
+	int i, sum1 = 0, sum2 = 0;
 
-	for (i = 0; i < size; i++)
-	{
-		sum1 += *(a + i * size + i);
-		sum2 += *(a + i * size + (size - 1 - i));
+	for (i = 0; i < size; i++) {
+		sum1 += a[i * size + i];
+		sum2 += a[i * size + (size - i - 1)];
 	}
 
-	print_number(sum1);
-	_putchar(',');
-	_putchar(' ');
-	print_number(sum2);
-	_putchar('\n');
-}
-
-/**
- * print_number - Prints a number using _putchar
- * @num: The number to be printed
- */
-{
-	int digit, copy, divisor = 1;
-
-	if (num < 0)
-	{
-		_putchar('-');
-		num = -num;
-	}
-
-	copy = num;
-	while (copy / 10)
-	{
-		divisor *= 10;
-		copy /= 10;
-	}
-
-	while (divisor)
-	{
-		digit = num / divisor;
-		_putchar(digit + '0');
-		num %= divisor;
-		divisor /= 10;
+	for (i = 0; i < size; i++) {
+		_putchar('The sum of the first diagonal is: ');
+		_putchar(sum1 + '0');
+		_putchar('\n');
+		_putchar('The sum of the second diagonal is: ');
+		_putchar(sum2 + '0');
+		_putchar('\n');
 	}
 }
