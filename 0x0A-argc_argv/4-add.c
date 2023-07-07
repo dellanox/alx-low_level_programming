@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - Entry point of the program
@@ -9,6 +10,7 @@
  * Return: 0 on success, 1 on error
  */
 int main(int argc, char *argv[])
+
 {
 	int i;
 	int sum = 0;
@@ -22,15 +24,20 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		num = atoi(argv[i]);
+		char *arg = argv[i];
 
-		if (num == 0 && *argv[i] != '0')
+		while (*arg)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(*arg))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			arg++;
 		}
 
-		if (num < (0))
+		num = atoi(argv[i]);
+		if (num < 0)
 		{
 			printf("Error\n");
 			return (1);
