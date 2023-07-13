@@ -81,5 +81,11 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 
 void *malloc_checked(unsigned int b);
+void multiply(char *num1, char *num2);
+int main(int argc, char *argv[]);
+
+
+
+
 
 #endif /* MAIN_H */
