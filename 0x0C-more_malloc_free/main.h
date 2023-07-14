@@ -44,7 +44,7 @@ char *rot13(char *);
 void print_number(int n);
 
 int _putchar(char c);
-void simple_print_buffer(char *buffer, unsigned int size);
+/*void simple_print_buffer(char *buffer, unsigned int size);*/
 char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strchr(char *s, char c);
@@ -57,7 +57,7 @@ void set_string(char **s, char *to);
 void print_number(int num);
 
 int _putchar(char c);
-void simple_print_buffer(char *buffer, unsigned int size);
+/*void simple_print_buffer(char *buffer, unsigned int size);*/
 char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strchr(char *s, char c);
