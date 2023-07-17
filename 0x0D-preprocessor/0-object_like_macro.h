@@ -1,6 +1,12 @@
-#ifndef 0_OBJECT_LIKE_MACRO_H
-#define 0_OBJECT_LIKE_MACRO_H
+#ifndef OBJECT_LIKE_MACRO_H
+#define OBJECT_LIKE_MACRO_H
+
+/*
+ * File: 0-object_like_macro.h
+ * Description: Header file that defines macro SIZE as an abbreviation
+ * for the token 1024.
+ */
 
 #define SIZE 1024
 
-#endif /* 0_OBJECT_LIKE_MACRO_H */
+#endif /* OBJECT_LIKE_MACRO_H */
