@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - Returns the sum of all parameters in a program.
+ * sum_them_all - Returns the sum of all parameters.
  * @n: Number of parameters passed in function.
  * @...: A variable number of parameters to calculate the sum of.
  *
@@ -22,13 +22,11 @@ int sum_them_all(const unsigned int n, ...)
 	{
 		return (0);
 	}
-
 	for (i = 0; i < n; i++)
 	{
 		total += va_arg(count, unsigned int);
 	}
 	va_end(count);
-
 	return (total);
 
 }
