@@ -1,0 +1,51 @@
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * strtow - Splits a string into words.
+ * @str: The string to split.
+ *
+ * Return: Pointer to an array of strings (words),
+ *         or NULL if str is NULL, empty, or if memory allocation fails.
+ */
+char **strtow(char *str)
+{
+
+	int word_count = 0;
+	char *temp = str;
+	char *token;
+	int i = 0;
+	char **words = malloc(sizeof(char *) * (word_count + 1));
+
+	if (str == NULL || *str == '\0')
+		return (NULL);
+
+	while (*temp != '\0' && temp != NULL)
+	{
+		if (*temp != ' ' && (*(temp + 1) == ' ' || *(temp + 1) == '\0'))
+			word_count++;
+		temp++;
+	}
+
+
+	if (words == NULL)
+		return (NULL);
+
+	token = strtok(str, " ");
+
+	while (token != NULL)
+	{
+		words[i] = strdup(token);
+		if (words[i] == NULL)
+		{
+			while (i > 0)
+				free(words[--i]);
+			free(words);
+			return (NULL);
+		}
+		i++;
+		token = strtok(NULL, " ");
+	}
+	words[i] = NULL;
+	return (words);
+}
