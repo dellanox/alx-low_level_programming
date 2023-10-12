@@ -1,94 +1,97 @@
-# 0x04. Python - More Data Structures: Set, Dictionary
+# C - Doubly linked lists
 
-## Description
-What you should learn from this project:
-This project talks about Python Data Structures and highlight the following points.
+In this project, I learned about using doubly-linked lists in C.
 
-* Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
-* What are set and how to use them
-* What are the most common methods of set and how to use them
-* When to use sets versus lists
-* How to iterate into a set
-* What are dictionary and how to use them
-* When to use dictionaries versus lists or sets
-* What is a key in a dictionary
-* How to iterate into a dictionary
-* What is a lambda function
-* What is map, reduce and map functions
+## Tests :heavy_check_mark:
 
----
+* [tests](./tests): Folder of test files. Provided by ALX.
 
-### [0. Squared simple](./0-square_matrix_simple.py)
-* Write a function that computes the square value of all integers of a matrix.
+## Header File :file_folder:
 
+* [lists.h](./lists.h): Header file containing definitions and prototypes for all types
+and functions written for the project.
 
-### [1. Search and replace](./1-search_replace.py)
-* Write a function that replaces all occurrences of an element by another in a new list.
+| Type/File           | Definition/Prototype           |
+| ------------------- | ------------------------------ |
+| `struct dlistint_s`    | <ul><li>`int n`</li><li>`struct dlistint_s *prev`</li><li>`struct dlistint_s *new`</li></ul> |
+| `typedef dlistint_t`   | `struct dlistint_s`                                                                          |
+| `0-print_dlistint.c`   | `size_t print_dlistint(const dlistint_t *h);`                                                |
+| `1-dlistint_len.c`     | `size_t dlistint_len(const dlistint_t *h);`                                                  |
+| `2-add_dnodeint.c`  | `dlistint_t *add_dnodeint(dlistint_t **head, const int n);`                                     |
+| `3-add_dnodeint_end.c` | `dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);`                              |
+| `4-free_dlistint.c`    | `void free_dlistint(dlistint_t *head);`                                                      |
+| `5-get_dnodeint.c`     | `dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);`                   |
+| `6-sum_dlistint.c`     | `int sum_dlistint(dlistint_t *head);`                                                        |
+| `7-insert_dnodeint.c`  | `dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);`             |
+| `8-delete_dnodeint.c`  | `int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);`                       |
 
+## Tasks :page_with_curl:
 
-### [2. Unique addition](./2-uniq_add.py)
-* Write a function that adds all unique integers in a list (only once for each integer).
+* **0. Print list**
+  * [0-print_dlistint.c](./0-print_dlinstint.c): C function that prints all the elements
+  of a doubly-linked `dlistint_t` list.
+  * Returns the number of nodes in the list.
 
+* **1. List length**
+  * [1-dlistint_len.c](./1-dlistint_len.c): C function that returns the number of nodes in
+  a doubly-linked `dlistint_t` list.
 
-### [3. Present in both](./3-common_elements.py)
-* Write a function that returns a set of common elements in two sets.
+* **2. Add node**
+  * [2-add_dnodeint.c](./2-add_dnodeint.c): C function that adds a new node at the
+  beginning of a doubly-linked `dlistint_t` list.
+  * If the function fails - returns `NULL`.
+  * Otherwise - returns the address of the new element.
 
+* **3. Add node at the end**
+  * [3-add_dnodeint_end.c](./3-add_dnodeint_end.c): C function that adds a new
+  node at the end of a doubly-linked `dlistint_t` list.
+  * If the function fails - returns `NULL`.
+  * Otherwise - returns the address of the new element.
 
-### [4. Only differents](./4-only_diff_elements.py)
-* Write a function that returns a set of all elements present in only one set.
+* **4. Free list**
+  * [4-free_dlistint.c](./4-free_dlistint.c): C function that frees a
+  doubly-linked `dlistint_t` list.
 
+* **5. Get node at index**
+  * [5-get_dnodeint.c](./5-get_dnodeint.c): C function that locates a given node of a
+  doubly-linked `dlistint_t` list.
+  * The parameter `index` is the index of the node to locate - indices start at `0`.
+  * If the node does not exist - returns `NULL`.
+  * Otherwise - returns the address of the located node.
 
-### [5. Number of keys](./5-number_keys.py)
-* Write a function that returns the number of keys in a dictionary.
+* **6. Sum list**
+  * [6-sum_dlistint.c](./6-sum_dlistint.c): C function that sums all the data (`n`)
+  of a doubly-linked `dlistint_t` list.
+  * If the list is empty - returns `0`.
+  * Otherwise - returns the sum of all the data (`n`).
 
+* **7. Insert at index**
+  * [7-insert_dnodeint.c](./7-insert_dnodeint.c): C function that inserts a new node at a
+  given position.
+  * The parameter `idx` is the index of the list where the new node should
+  be added - indices start at `0`.
+  * If the function fails - returns `NULL`.
+  * Otherwise - returns the address of the new element.
+  * Requires compilation with functions defined in [2-add_dnodeint.c](./2-add_dnodeint.c)
+  and [3-add_dnodeint_end.c](./3-add_dnodeint_end.c).
 
-### [6. Print sorted dictionary](./6-print_sorted_dictionary.py)
-* Write a function that prints a dictionary by ordered keys.
+* **8. Delete at index**
+  * [8-delete_dnodeint.c](./8-delete_dnodeint.c): C function that deletes the node at
+  index `index` of a doubly-linked `dlistint_t` list.
+  * The paramter `index` is the index of the node to delete - indices start at `0`.
+  * If the function fails - returns `-1`.
+  * Otherwise - returns `1`.
 
+* **9. Crackme4**
+  * [100-password](./100-password): Text file containing the password for the
+  [crackme4](https://github.com/holbertonschool/0x16.c) executable.
 
-### [7. Update dictionary](./7-update_dictionary.py)
-* Write a function that replaces or adds key/value in a dictionary.
+* **10. Palindromes**
+  * [102-result](./102-result): Text file containing the largest palindrome made from a
+  product of two three-digit numbers. 
 
-
-### [8. Simple delete by key](./8-simple_delete.py)
-* Write a function that deletes a key in a dictionary.
-
-
-### [9. Multiply by 2](./9-multiply_by_2.py)
-* Write a function that returns a new dictionary with all values multiplied by 2
-
-
-### [10. Best score](./10-best_score.py)
-* Write a function that returns a key with the biggest integer value.
-
-
-### [11. Multiply by using map](./11-mutiply_list_map.py)
-* Write a function that returns a list with all values multiplied by a number without using any loops.
-
-
-### [12. Roman to Integer](./12-roman_to_int.py)
-* Technical interview preparation: 
-
-
-### [13. Weighted average!](./100-weight_average.py)
-* Write a function that returns the weighted average of all integers tuple (<score>, <weight>)
-
-
-### [14. Squared by using map](./101-square_matrix_map.py)
-* Write a function that computes the square value of all integers of a matrix using map
-
-
-### [15. Delete by value](./102-complex_delete.py)
-* Write a function that deletes keys with a specific value in a dictionary.
-
-
-### [16. CPython #1: PyBytesObject](./103-python.c)
-* Create two C functions that print some basic info about Python lists and Python bytes objects.
-
-
-
-Python lists:
----
-
-## Author
-* **Tabitha O'Melay** - [tabbykatz](https://github.com/tabbykatz)
+* **11. Crackme5**
+  * [103-keygen.c](./103-keygen.c): C function that generates passwords for the
+  [crackme5](https://github.com/holbertonschool/0x16.c) executable.
+  * Usage of the crackme: `./crackme5 username key`
+  * Usage of the keygen: `./keygen5 username`
